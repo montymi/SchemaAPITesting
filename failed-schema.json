@@ -1,3 +1,5 @@
+// Main Properties: [user, orders, test]
+
 {
   "type": "object",
   "properties": {
