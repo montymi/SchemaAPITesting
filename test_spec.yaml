@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Simple API PASS
+  description: A simple API to illustrate OpenAPI concepts
+
+servers:
+  - url: https://reqres.in/api
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []
+
+paths:
+  /users:
+    get:
+      description: Returns a list of users
+      responses:
+        '200':
+          description: Successfully returned a list of users
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  required:
+                    - email
+                  properties:
+                    email:
+                      type: string
+                    first_name:
+                      type: string
+                    last_name:
+                      type: integer
+                    avatar:
+                      type: string
+
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:   
+                  message:
+                    type: string
