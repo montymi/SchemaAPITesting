@@ -1,5 +1,5 @@
 const failedSchema = 'https://raw.githubusercontent.com/montymi/SchemaAPITesting/main/failed-schema.json';
-const passedSchema = 'https://raw.githubusercontent.com/montymi/SchemaAPITesting/main/passed-schema.json'
+const passedSchema = 'https://raw.githubusercontent.com/montymi/SchemaAPITesting/main/passed-schema.json';
 
 function getRequest(schemaUrl) {
   return new Promise(function(resolve, reject) {
