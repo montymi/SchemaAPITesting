@@ -56,12 +56,18 @@ This repo is a walkthrough on how to validate schema files against API's via the
 ## Getting Started
 
 The following will lead you through how to use the files in this repo to conduct the same testing in Postman for practice.
+
 Clone this repo (below uses HTTPS method):
-`git clone https://github.com/montymi/SchemaAPITesting.git`
+```git clone https://github.com/montymi/SchemaAPITesting.git```
+
 Navigate into the directory and copy the contents of `postmanHTTPresponse.json`
+
 Go to [Mocky.io](https://designer.mocky.io/), click `New Mock` and paste the contents of the json file into the HTTP Response Body section
+
 Change the expiration date of this mock HTTP server (if you would like)
+
 Click `GENERATE MY HTTP RESPONSE` and copy the url that is generated (will be used later so save it somewhere if necessary)
+
 
 That's it for the setup, go to [Usage](#usage) for next steps.
 
