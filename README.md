@@ -140,16 +140,12 @@ Distributed under the GNU General Public License. See `LICENSE.txt` for more inf
 
 Michael Montanaro - [LinkedIn](https://www.linkedin.com/in/michael-montanaro/) - [GitHub](https://github.com/montymi) - [Email](mcmontanaro01@gmail.com)
 
-Project Link: [https://github.com/montymi/SchemaAPITesting](https://github.com/montymi/SchemaAPITesting)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-Use this space to list any resources used or that may be helpful in understanding the project
 
 * [Valentina Despa](https://www.youtube.com/watch?v=P_So0vpNJCQ&t=211s&ab_channel=ValentinDespa)
 * [Postman](https://learning.postman.com/docs/writing-scripts/test-scripts/)
