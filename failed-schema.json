@@ -1,5 +1,3 @@
-// Main Properties: [user, orders, test]
-
 {
   "type": "object",
   "properties": {
@@ -22,3 +20,4 @@
   },
   "required": ["user", "orders", "test"]
 }
+// Main Properties: [user, orders, test]
