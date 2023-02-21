@@ -129,7 +129,7 @@ Contributions are, in my opinion, the greatest part of OSS and are what will be 
 <!-- LICENSE -->
 ## License
 
-Distributed under the GNU General Public License. See `LICENSE` for more information.
+Distributed under the GNU General Public License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,7 +140,7 @@ Distributed under the GNU General Public License. See `LICENSE` for more informa
 
 Michael Montanaro - [LinkedIn](https://www.linkedin.com/in/michael-montanaro/) - [GitHub](https://github.com/montymi) - [Email](mcmontanaro01@gmail.com)
 
-Project Link: [https://github.com/montymi/ClearDocs](https://github.com/montymi/SchemaAPITesting)
+Project Link: [https://github.com/montymi/SchemaAPITesting](https://github.com/montymi/SchemaAPITesting)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,15 +161,15 @@ Use this space to list any resources used or that may be helpful in understandin
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/montymi/ClearDocs.svg?style=for-the-badge
-[contributors-url]: https://github.com/montymi/ClearDocs/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/montymi/ClearDocs.svg?style=for-the-badge
-[forks-url]: https://github.com/montymi/ClearDocs/network/members
-[stars-shield]: https://img.shields.io/github/stars/montymi/ClearDocs.svg?style=for-the-badge
-[stars-url]: https://github.com/montymi/ClearDocs/stargazers
-[issues-shield]: https://img.shields.io/github/issues/montymi/ClearDocs.svg?style=for-the-badge
-[issues-url]: https://github.com/montymi/ClearDocs/issues
-[license-shield]: https://img.shields.io/github/license/montymi/ClearDocs.svg?style=for-the-badge
-[license-url]: https://github.com/montymi/ClearDocs/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/montymi/SchemaAPITesting.svg?style=for-the-badge
+[contributors-url]: https://github.com/montymi/SchemaAPITesting/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/montymi/SchemaAPITesting.svg?style=for-the-badge
+[forks-url]: https://github.com/montymi/SchemaAPITesting/network/members
+[stars-shield]: https://img.shields.io/github/stars/montymi/SchemaAPITesting.svg?style=for-the-badge
+[stars-url]: https://github.com/montymi/SchemaAPITesting/stargazers
+[issues-shield]: https://img.shields.io/github/issues/montymi/SchemaAPITesting.svg?style=for-the-badge
+[issues-url]: https://github.com/montymi/SchemaAPITesting/issues
+[license-shield]: https://img.shields.io/github/license/montymi/SchemaAPITesting.svg?style=for-the-badge
+[license-url]: https://github.com/montymi/SchemaAPITesting/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/michael-montanaro
