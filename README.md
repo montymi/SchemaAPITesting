@@ -16,7 +16,7 @@
   <h2 align="center">Schema API Validation</h2>
 
   <p align="center">
-    Created by: [Michael Montanaro](https://github.com/montymi)
+    Created by: <a href="https://github.com/montymi">Michael Montanaro</a>
     <br />
     <br />
     <br />
