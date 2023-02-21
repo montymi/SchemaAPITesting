@@ -62,7 +62,7 @@ The following will lead you through how to use the files in this repo to conduct
 git clone https://github.com/montymi/SchemaAPITesting.git
 ```
 - Navigate into the directory and copy the contents of `postmanHTTPresponse.json`
-- Go to [Mocky.io](https://designer.mocky.io/), click `New Mock` and paste the contents of the json file into the HTTP Response Body section
+- Go to [mocky.io](https://designer.mocky.io/), click `New Mock` and paste the contents of the json file into the HTTP Response Body section
 - Change the expiration date of this mock HTTP server (if you would like)
 - Click `GENERATE MY HTTP RESPONSE` and copy the url that is generated (will be used later so save it somewhere if necessary)
 - Sign into your Postman account, it is completely free for individual use
@@ -90,19 +90,23 @@ Below will take you through steps necessary to setup a testing environment and r
 10. In the `get` bar of both requests, type `{{url}}`
 - Note: this can just be substituted with the `mocky.io` link
 11. Click on the `Tests` tab and paste in the contents of the `postmanTesting.js` file that is in this directory
-12. Based on which request, change line 22 to be `failedSchema` or `passedSchema`
+12. Based on desired outcome, change line 22 to be `failedSchema` or `passedSchema`
 - Note: `failedSchema` includes a `test` parameter that is *required* and thus fails because it is not present in the HTTP response
-13. In order to import your own schema file, the link must be for the *raw* content not the general github page
+13. Click on the main collection tag (ie. `Basic Schema`)
+14. Click on the `Runs` tab and click `Run Collection`
+15. Lastly, no need to change any settings, just click the `Run` button near the bottom of the page
+- *IMPORTANT*: In order to import your own schema file, the link must be for the *raw* content not the general github page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- STRUCTURE -->
 ## Structure
 
-As stated above, less than 6% of GitHub projects include documentation or diagrams about the software's architecture. Since larger projects can often have a very convoluted source code structure, diagrams are the ideal method of displaying the flow of the project. 
-
-*Here is an example given by the official [PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML) GitHub page which utilizes both graphical and verbal descriptions to portray the workflow of a web application.*
-<div align="center"><img width="830" alt="Example software architecture drawn via PlantUML" src="https://user-images.githubusercontent.com/84359773/201444996-30331b8e-69c2-4440-bf0b-a79610282772.png"></div>
+- README.md -> Walkthrough of testing procedure
+- failed-schema.json -> schema validated against HTTP response that will FAIL because of added `test` parameter marked as *required*
+- passed-schema.json -> schema validated against HTTP response that will PASS because the parameters match
+- postmanHTTPResponse.json -> file whose contents are set to be the HTTP response by the `mocky` server
+- postmanTesting.js -> file whose contents are pasted into the `Tests` section of a Postman request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
