@@ -65,6 +65,7 @@ git clone https://github.com/montymi/SchemaAPITesting.git
 - Go to [Mocky.io](https://designer.mocky.io/), click `New Mock` and paste the contents of the json file into the HTTP Response Body section
 - Change the expiration date of this mock HTTP server (if you would like)
 - Click `GENERATE MY HTTP RESPONSE` and copy the url that is generated (will be used later so save it somewhere if necessary)
+- Sign into your Postman account, it is completely free for individual use
 
 
 That's it for the setup, go to [Usage](#usage) for next steps.
@@ -75,96 +76,23 @@ That's it for the setup, go to [Usage](#usage) for next steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Users are much more likely to use and test a project if they can quickly determine how best to use the software and whether or not it really is what they are looking for. Clear usage examples also give incoming developers a chance to better understand the code and its intended use.
+Below will take you through steps necessary to setup a testing environment and run the created tests. It is important to note that some of the techniques/steps below (ie. environment setup) are strictly good practice, but can be substituted for other methods. 
 
-*Here is an example from a project for getting the weather via CLI by [genuinetools](https://github.com/genuinetools)*
-
-```
-# get the current weather in your current location
-$ weather
-
-# change the units to metric
-$ weather -l "Paris, France" -u si
-
-# it will auto guess the units though so changing
-# the location to paris will change the units to `si`
-$ weather -l "Paris, France"
-
-# get three days forecast for NY
-$ weather -l 10028 -d 3
-
-# or you can autolocate and get three days forecast
-$ weather -d 3
-
-# get the weather in Manhattan Beach, CA
-# even includes alerts
-$ weather -l "Manhattan Beach, CA"
-#                             .;odc
-#                           ;kXNNNO
-#                         .0NNO0NN:
-#                        'XNK; dNNl
-#                        KNX'  'XNK.
-#                       ,NNk    cXNK,
-#                       ,NNk     '0NNO:.
-#                     .'cXNXl;,.   ,xXNNKOxxxk0Xx
-#                 'lOXNNNNNNNNNNXOo'  ':oxkOXNNXc
-#               cKNNKd:'.    ..;d0NNKl    ,xXNK,
-#        .;:cclKNXd.              .oXNXxOXNNXl
-#    .cOXNNNNNNNO.                  .kNNNNNNNXOc.
-#   lXNXx;.    .                      .    .;dXNXo
-#  ONNd.                                       oXN0.
-# dNNo                                          cNNk
-# XNN.                                           NNX
-# 0NN'                                          .NNK
-# ;XN0.                                        .ONNc
-#  ;XNXo.                                    .lXNX:
-#   .oXNX0dlcclx0Xo.              .oXKxlccldOXNXd.
-#      ,lk0KXXK0xKNN0o;..    ..;o0NNKx0KXXX0ko,
-#                 'lOXNNNNNNNNNNXOo,
-#                     :x0XNNX0x:.
-#
-#
-# Current weather is Partly Cloudy in Manhattan Beach in California for July 14 at 4:14am EDT
-# The temperature is 69.2°F, but it feels like 69.2°F
-#
-# Special Weather Statement for Los Angeles, CA
-# ...THREAT OF MONSOONAL THUNDERSTORMS LATE TONIGHT THROUGH WEDNESDAY...
-# A STRONG UPPER LEVEL HIGH PRESSURE SYSTEM CURRENTLY CENTERED OVER NEVADA
-# WILL BRING INCREASING EAST TO SOUTHEAST FLOW OVER SOUTHERN
-# CALIFORNIA. AS A RESULT...A SIGNIFICANT SURGE OF MONSOONAL MOISTURE
-# WILL MOVE INTO SOUTHWEST CALIFORNIA LATE TONIGHT THROUGH WEDNESDAY.
-# THE GREATEST THREAT OF SHOWERS AND THUNDERSTORMS WILL BE ACROSS THE
-# MOUNTAINS AND ANTELOPE VALLEY LATE TONIGHT INTO TUESDAY. DUE TO THE
-# EASTERLY UPPER LEVEL FLOW ON MONDAY...THERE WILL ALSO BE A SLIGHT
-# CHANCE OF SHOWERS AND THUNDERSTORMS ACROSS MOST COASTAL AND VALLEY
-# AREAS.
-# THE DEEPER MONSOONAL MOISTURE WILL BRING THE POTENTIAL FOR BRIEF HEAVY
-# RAINFALL WITH STORMS THAT DEVELOP ON MONDAY AND TUESDAY...ESPECIALLY
-# ACROSS THE MOUNTAINS AND ANTELOPE VALLEY. WHILE STORMS ARE EXPECTED
-# TO BE FAST MOVING...THERE WILL BE THE POTENTIAL FOR LOCALIZED FLOODING
-# OF ROADWAYS AND ARROYOS. ON TUESDAY...THE THREAT OF THUNDERSTORMS IS
-# EXPECTED TO REMAIN CONFINED TO THE MOUNTAINS AND DESERTS. WITH WEAKER
-# UPPER LEVEL WINDS ON TUESDAY...STORMS WILL LIKELY MOVE SLOWER. AS A
-# RESULT...THERE WILL BE AN INCREASED THREAT OF FLASH FLOODING.
-# IT WILL NOT BE AS HOT ACROSS MUCH OF THE REGION TOMORROW DUE TO THE
-# INCREASED MOISTURE AND CLOUD COVERAGE...WITH INTERIOR SECTIONS
-# GENERALLY REMAINING IN THE 90S. HOWEVER...THERE WILL BE A
-# SIGNIFICANT INCREASE IN HUMIDITY ON MONDAY THAT WILL CONTINUE TO
-# BRING DISCOMFORT.
-# ANYONE PLANNING OUTDOOR ACTIVITIES IN THE MOUNTAINS AND DESERTS
-# DURING THE NEXT FEW DAYS SHOULD CAREFULLY MONITOR THE LATEST
-# NATIONAL WEATHER SERVICE FORECASTS AND STATEMENTS DUE TO THE
-# POTENTIAL HAZARDS ASSOCIATED WITH THUNDERSTORMS.
-#             Created: July 13 at 10:50pm EDT
-#             Expires: July 14 at 7:00pm EDT
-#
-# Ick! The humidity is 85%
-# The nearest storm is 18 miles NE away
-# The wind speed is 3.96 mph SE
-# The cloud coverage is 35%
-# The visibility is 9.58 miles
-# The pressure is 1012.99 mbar
-```
+1. Create and name a workspace (ex. Schema Validation)
+2. On the left side of the screen, click on `Environments`
+3. Click `+`, name the environment (ie. `Live`)
+4. In the variable column, write `url`
+5. In the initial value column (and the current value column), paste the link to the created `mocky.io` site
+6. In the top right, click `No Environment` and select the name of your environment in the drop down menu
+7. On the left side of the screen, click `Collections`
+8. Click the `+`, name the collection (ie. `Basic Schema`)
+9. Create two new requests (ie. `PASSED Test` and `FAILED Test`)
+10. In the `get` bar of both requests, type `{{url}}`
+- Note: this can just be substituted with the `mocky.io` link
+11. Click on the `Tests` tab and paste in the contents of the `postmanTesting.js` file that is in this directory
+12. Based on which request, change line 22 to be `failedSchema` or `passedSchema`
+- Note: `failedSchema` includes a `test` parameter that is *required* and thus fails because it is not present in the HTTP response
+13. In order to import your own schema file, the link must be for the *raw* content not the general github page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
