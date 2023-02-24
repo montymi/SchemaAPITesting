@@ -47,7 +47,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This repo is a walkthrough on how to validate schema files against API's via their server responses using Postman. The example is simple but highly applicable and easily modified to meet your use case. Following the steps below will get yoyou more familiar with Postman before you attempt to switch over to your own projects.
+This repo is a walkthrough on how to validate schema files against API's via their server responses using Postman. The example is simple but highly applicable and easily modified to meet your use case. Following the steps below will get you more familiar with Postman before you attempt to switch over to your own projects.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
