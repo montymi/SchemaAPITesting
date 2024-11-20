@@ -88,8 +88,8 @@ Below will take you through steps necessary to setup a testing environment and r
 9. Create two new requests (ie. `PASSED Test` and `FAILED Test`)
 10. In the `get` bar of both requests, type `{{url}}`
 - Note: this can just be substituted with the `mocky.io` link
-11. Click on the `Tests` tab and paste in the contents of the `postmanTesting.js` file that is in this directory
-12. Based on desired outcome, change line 22 to be `failedSchema` or `passedSchema`
+11. Click on the `Tests` tab and paste in the contents of the `postmanTesting.js` or `postmanTestingV2.js` files that are in this directory
+12. Based on desired outcome, change the url being validated to `failedSchema` or `passedSchema`
 - Note: `failedSchema` includes a `test` parameter that is *required* and thus fails because it is not present in the HTTP response
 13. Click on the main collection tag (ie. `Basic Schema`)
 14. Click on the `Runs` tab and click `Run Collection`
