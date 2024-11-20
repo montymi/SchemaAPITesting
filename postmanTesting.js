@@ -30,3 +30,14 @@ getRequest(failedSchema)
   .catch(function(error) {
     console.error(error);
   });
+
+// getRequest(passedSchema)
+//   .then(function(response) {
+//     console.log(response);
+//     pm.test("Validate Schema", () => {
+//         pm.response.to.have.jsonSchema(response)
+//     });
+//   })
+//   .catch(function(error) {
+//     console.error(error);
+//   });
